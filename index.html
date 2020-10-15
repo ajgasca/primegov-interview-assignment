@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Meeting Mintues</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400&display=swap" rel="stylesheet">
+    <style>
+      body {
+        background-color: #fcfcfc;
+        font-family: 'Open Sans', sans-serif;
+        margin: 1.5em;
+      }
+      button {
+        background-color: #3C3032;
+        border-radius: 5%;
+        color: white;
+        font-size: 14px;
+        font-weight: 300px;
+        margin: 0.5em;
+        padding: 1em;
+        text-transform: uppercase;
+      }
+      .buttons-div {
+        margin-top: 2em;
+        text-align: center;
+      }
+      .column {
+        display: flex;
+        width: 50%;
+      }
+      #fiscal-cost {
+        height: 2em;
+        margin-top: 0.5em;
+        width: 20vw;
+      }
+      h2 {
+        border-bottom: 0.5px solid rgba(105, 105, 105, 0.25);
+        color: darkolivegreen;
+      }
+      .indent {
+        margin-left: 1.5em;
+        width: 35%;
+      }
+      label {
+        font-size: 14px;
+        font-weight: bolder;
+        margin-right: 1em;
+      }
+      .options {
+        height: 2em;
+        margin-bottom: 1em;
+        width: 20vw;
+      }
+      .row {
+        display: flex;
+      }
+      #subject {
+        height: 20vh;
+        margin-bottom: 1em;
+        width: 30vw;
+        
+      }
+      #subject-label{
+        float: left;
+      }
+    </style>
+  </head>
+  <body>
+    <form action="">
+      <div class="details-div">
+        <h2>Meeting Details</h2>
+        <div class="row">
+          <div class="column indent">
+            <label for="committee">
+              <span>Committee</span>
+            </label>
+            <select class="options" id="committee" name="committee">
+              <option value=""></option>
+              <option value="judiciary">Judiciary</option>
+              <option value="education">Education</option>
+              <option value="finance">Finance</option>
+            </select>
+          </div>
+          <div class="column">
+            <label for="meeting-type">
+              <span>Meeting Type</span>
+            </label>
+            <select class="options" id="meeting-type" name="meeting-type">
+              <option value=""></option>
+              <option value="regular">Regular</option>
+              <option value="emergency">Emergency</option>
+              <option value="executive">Executive</option>
+            </select>
+          </div>
+        </div>
+        <br>
+        <div class="row">
+          <div class="column indent">
+            <label for="meeting-date">
+              <span>Meeting Date</span>
+            </label>
+            <input class="options" type="date" id="meeting-date" name="meeting-date">
+          </div>
+          <div class="column">
+            <label for="meeting-section">
+              <span>Meeting Section</span>
+            </label>
+            <select class="options" id="meeting-section" name="meeting-section">
+              <option value=""></option>
+              <option value="standing">Standing Items</option>
+              <option value="business">New Business</option>
+              <option value="ending">Ending Items</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="questions-div">
+        <h2>Questions</h2>
+        <label for="department">
+          <span>Department:</span>
+        </label>
+        <select class="options" id="department" name="department">
+          <option value=""></option>
+          <option value="libraries">Libraries</option>
+          <option value="public">Public Works</option>
+          <option value="parks">Parks & Recreation</option>
+        </select>
+        <br>
+        <label for="item-type">
+          <span>Item Type:</span>
+        </label>
+        <select class="options" id="item-type" name="item-type">
+          <option value=""></option>
+          <option value="open">Open Ended</option>
+          <option value="specific">Specific</option>
+          <option value="closed">Closed</option>
+        </select>
+        <br>
+        <label for="subject" id="subject-label">
+          <span>Subject:</span>
+        </label>
+        <textarea id="subject" name="subject" placeholder="Subject"></textarea>
+        <br>
+        <label for="fiscal-cost">
+          <span>Fiscal Cost:</span>
+        </label>
+        <br>
+        <input type="text" id="fiscal-cost" name="fiscal-cost">
+      </div>
+      
+      <div class="buttons-div">
+        <button type="submit">Submit</button>
+        <button type="button">Draft</button>
+        <button type="button">Cancel</button>
+      </div>
+  </form>
+  </body>
+</html>
